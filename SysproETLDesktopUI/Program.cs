@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SysPro.ETL
+namespace SysproETLDesktopUI
 {
     static class Program
     {
@@ -16,8 +16,7 @@ namespace SysPro.ETL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
-
+            Application.Run(new Form1());
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SysPro.ETL")]
+[assembly: AssemblyTitle("TestApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard")]
-[assembly: AssemblyProduct("SysPro.ETL")]
+[assembly: AssemblyProduct("TestApp")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("52aa931e-bd40-44fb-8234-cb842930569c")]
+[assembly: Guid("674641bd-df62-4a58-a105-4dd15620ff6c")]
 
 // Version information for an assembly consists of the following four values:
 //

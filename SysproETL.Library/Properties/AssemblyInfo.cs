@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SysproETLDesktopUI")]
+[assembly: AssemblyTitle("SysproETL.Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard")]
-[assembly: AssemblyProduct("SysproETLDesktopUI")]
+[assembly: AssemblyProduct("SysproETL.Library")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2b4fcfcc-4df7-46b0-8f32-934954f9a366")]
+[assembly: Guid("a494002e-b246-459e-a3a9-e847ffa4f361")]
 
 // Version information for an assembly consists of the following four values:
 //

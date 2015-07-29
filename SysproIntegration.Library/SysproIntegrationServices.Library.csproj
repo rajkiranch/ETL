@@ -119,6 +119,7 @@
     <Compile Include="DataAccess\Acumatica\AcumaticaRepository.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksContext.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksRepository.cs" />
+    <Compile Include="External\QBXml.cs" />
     <Compile Include="External\Screen.cs" />
     <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="Infrastructure\Enums.cs" />

@@ -22,7 +22,7 @@ namespace SysproIntegration.Library.Configuration
 
         public ServiceElement GetAcumaticaConfiguration()
         {
-            throw new NotImplementedException();
+            return DatabaseConfiguration.DatabaseServiceSettings[_key];
         }
 
         public string GetAppSettingValue()

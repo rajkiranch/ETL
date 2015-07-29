@@ -15,22 +15,23 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
     public class AcumaticaRepository : IAcumaticaStock, IAcumaticaInvoice
     {
         private Screen _screen;
-        private readonly AcumaticaContext _context;
+        public AcumaticaContext Context { get; private set; }
 
         public AcumaticaRepository(AcumaticaContext context)
         {
-            this._context = context;
-           this._screen = _context.Connect();
+            
+            this.Context = context;
+            this._screen = Context.Connect();
         }
 
         public AcumaticaRepository(): this(new AcumaticaContext())
         {
-            this._screen = _context.Connect();
+            
         }
 
         public AcumaticaRepository(string key):this(new AcumaticaContext(key))
         {
-            this._screen = _context.Connect();
+            
         }
 
         public bool IsStockItemExists(string name)

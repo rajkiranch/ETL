@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SysproIntegration.Library.Infrastructure;
 
 namespace SysproIntegration.Library.DataAccess.Acumatica
 {
@@ -18,7 +19,7 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
             this._config = config;
         }
         public AcumaticaContext()
-            : this(new SysproConfig("AcumaticaConnection"))
+            : this(new SysproConfig(Constants.DefaultAcumaticaFileConnectionKey))
         {
         }
         public AcumaticaContext(string key)
@@ -27,9 +28,7 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
         }
         public Screen Connect()
         {
-            var acumaticaElement = this._config.GetAcumaticaConfiguration();
-            ///connection logic
-            return new Screen();
+            throw new NotImplementedException();
         }
     }
 }

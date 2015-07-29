@@ -15,9 +15,7 @@ namespace SysproIntegration.Library.Infrastructure
         {
             log4net.Config.XmlConfigurator.Configure();
         }
-        /// 
-        /// </summary>
-        /// <param name="exception"></param>
+      
         public static void LogException(Exception exception)
         {
 
@@ -28,18 +26,12 @@ namespace SysproIntegration.Library.Infrastructure
             iLog.Info(System.Environment.NewLine);
             iLog.Info("****************************************************************");
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="message"></param>
+        
         public static void LogInfo(string message)
         {
             iLog.Info(message);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dateTime"></param>
+       
         public static void LogDateAndTime(DateTime dateTime)
         {
             iLog.Info(dateTime.ToLongDateString());

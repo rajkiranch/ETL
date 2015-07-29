@@ -100,6 +100,7 @@
       <HintPath>..\packages\QuickBooksOnlineAccess.0.3.6\lib\net45\QuickBooksOnlineAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -109,20 +110,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\DatabaseConfiguration.cs" />
+    <Compile Include="Configuration\FileConfiguration.cs" />
+    <Compile Include="Configuration\ServiceConfiguration.cs" />
+    <Compile Include="Configuration\IConfig.cs" />
+    <Compile Include="Configuration\SysproConfig.cs" />
+    <Compile Include="DataAccess\Acumatica\AcumaticaContext.cs" />
+    <Compile Include="DataAccess\Acumatica\AcumaticaRepository.cs" />
+    <Compile Include="DataAccess\QuickBooks\QuickBooksContext.cs" />
+    <Compile Include="DataAccess\QuickBooks\QuickBooksRepository.cs" />
+    <Compile Include="External\Screen.cs" />
     <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="Infrastructure\Enums.cs" />
     <Compile Include="Infrastructure\Logger.cs" />
+    <Compile Include="Interfaces\Acumatica\IAcumaticaInvoice.cs" />
+    <Compile Include="Interfaces\Acumatica\IAcumaticaStock.cs" />
+    <Compile Include="Interfaces\IDataBaseContext.cs" />
+    <Compile Include="Models\Acumatica\Invoice.cs" />
+    <Compile Include="Models\Acumatica\Stock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessLogic\Extracts\" />
-    <Folder Include="BusinessLogic\Loads\" />
-    <Folder Include="BusinessLogic\Transforms\" />
-    <Folder Include="Configuration\" />
-    <Folder Include="DataAccess\" />
-    <Folder Include="External\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Models\" />
+    <Folder Include="BusinessLogic\Acumatica\Extracts\" />
+    <Folder Include="BusinessLogic\Acumatica\Loads\" />
+    <Folder Include="BusinessLogic\Acumatica\Transforms\" />
+    <Folder Include="BusinessLogic\Acumatica\Validations\" />
+    <Folder Include="BusinessLogic\QuickBooks\Extract\" />
+    <Folder Include="BusinessLogic\QuickBooks\Loads\" />
+    <Folder Include="BusinessLogic\QuickBooks\Transforms\" />
+    <Folder Include="BusinessLogic\QuickBooks\Validations\" />
+    <Folder Include="Interfaces\QuickBooks\" />
+    <Folder Include="Models\QuickBooks\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>

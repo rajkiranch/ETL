@@ -1,4 +1,5 @@
-﻿using SysproIntegration.Library.Infrastructure;
+﻿using SysproIntegration.Library.Configuration;
+using SysproIntegration.Library.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,29 @@ namespace SysproETLApp
                 Logger<Form>.LogException(ex);
                 throw;
             }
+        }
+        
+        private void btnTestFileConfig_Click(object sender, EventArgs e)
+        {
+            var fileElement = DatabaseConfiguration.DatabaseFileSettings["DefaultQuickBooksFileConnection"];            
+            //Change the config
+            var newElement = new FileElement
+            {
+                Key = "DefaultQuickBooksFileConnection",
+                Path = @"c:\test"
+            };
+            DatabaseConfiguration.SaveDatabaseFileSettings(newElement);            
+            System.Diagnostics.Process.Start(System.Reflection.Assembly.GetEntryAssembly().Location);
+            this.Close();
+            
+
+
+        }
+
+        private void btnServiceConfig_Click(object sender, EventArgs e)
+        {
+            var serviceElement = DatabaseConfiguration.DatabaseServiceSettings["DefaultAcumaticaServiceConnection"];
+            MessageBox.Show(serviceElement.Url);
         }
     }
 }

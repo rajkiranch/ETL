@@ -8,5 +8,7 @@ namespace SysproIntegration.Library.Infrastructure
 {
     public class Constants
     {
+        public const string DefaultQbFileConnectionKey = "DefaultQuickBooksFileConnection";
+        public const string DefaultAcumaticaFileConnectionKey = "DefaultAcumaticaFileConnection";
     }
 }

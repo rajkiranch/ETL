@@ -8,5 +8,8 @@ namespace SysproIntegration.Library.Models.Acumatica
 {
     public class Invoice
     {
+        public string Column4 { get; set; }
+
+        public string Column5 { get; set; }
     }
 }

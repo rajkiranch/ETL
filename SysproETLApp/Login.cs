@@ -60,5 +60,11 @@ namespace SysproETLApp
             var serviceElement = DatabaseConfiguration.DatabaseServiceSettings["DefaultAcumaticaServiceConnection"];
             MessageBox.Show(serviceElement.Url);
         }
+
+        private void btnOpenQBToAcumatica_Click(object sender, EventArgs e)
+        {
+            var newfrm=new FrmExportInvoice();
+            newfrm.ShowDialog();
+        }
     }
 }

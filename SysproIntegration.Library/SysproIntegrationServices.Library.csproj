@@ -42,6 +42,9 @@
     <Reference Include="DevDefined.OAuth">
       <HintPath>..\packages\DevDefined.OAuth.0.2\lib\DevDefined.OAuth.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.6.2.0\lib\Net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Intuit.Ipp.Core">
       <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Core.dll</HintPath>
     </Reference>
@@ -110,6 +113,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\AcumaticaService.cs" />
+    <Compile Include="BusinessLogic\QuickBooksService.cs" />
+    <Compile Include="BusinessLogic\Transformations\AcumaticaTransformation.cs" />
+    <Compile Include="BusinessLogic\Transformations\AutoMapperConfiguration.cs" />
+    <Compile Include="BusinessLogic\Transformations\MapperProfiles.cs" />
+    <Compile Include="BusinessLogic\Validations\AcumaticaValidations.cs" />
+    <Compile Include="BusinessLogic\Validations\AcumaticaValidators.cs" />
+    <Compile Include="BusinessLogic\Validations\IValidation.cs" />
     <Compile Include="Configuration\DatabaseConfiguration.cs" />
     <Compile Include="Configuration\FileConfiguration.cs" />
     <Compile Include="Configuration\ServiceConfiguration.cs" />
@@ -124,24 +135,23 @@
     <Compile Include="Infrastructure\Constants.cs" />
     <Compile Include="Infrastructure\Enums.cs" />
     <Compile Include="Infrastructure\Logger.cs" />
-    <Compile Include="Interfaces\Acumatica\IAcumaticaInvoice.cs" />
-    <Compile Include="Interfaces\Acumatica\IAcumaticaStock.cs" />
+    <Compile Include="Interfaces\Repositories\IAcumaticaRepository.cs" />
     <Compile Include="Interfaces\IDataBaseContext.cs" />
+    <Compile Include="Interfaces\Repositories\IQbRepository.cs" />
+    <Compile Include="Interfaces\Services\IAcumaticaService.cs" />
+    <Compile Include="Interfaces\Services\IBaseService.cs" />
+    <Compile Include="Interfaces\Services\IQuickBooksService.cs" />
+    <Compile Include="Interfaces\Views\IInvoiceExportQbToAcumaticaView.cs" />
     <Compile Include="Models\Acumatica\Invoice.cs" />
     <Compile Include="Models\Acumatica\Stock.cs" />
+    <Compile Include="Models\DataError.cs" />
+    <Compile Include="Models\QuickBooks\QBInvoice.cs" />
+    <Compile Include="Models\QuickBooks\QBStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessLogic\Acumatica\Extracts\" />
-    <Folder Include="BusinessLogic\Acumatica\Loads\" />
-    <Folder Include="BusinessLogic\Acumatica\Transforms\" />
-    <Folder Include="BusinessLogic\Acumatica\Validations\" />
-    <Folder Include="BusinessLogic\QuickBooks\Extract\" />
-    <Folder Include="BusinessLogic\QuickBooks\Loads\" />
-    <Folder Include="BusinessLogic\QuickBooks\Transforms\" />
-    <Folder Include="BusinessLogic\QuickBooks\Validations\" />
-    <Folder Include="Interfaces\QuickBooks\" />
-    <Folder Include="Models\QuickBooks\" />
+    <Folder Include="Presenters\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ namespace SysproIntegration.Library.Infrastructure
 {
     public class Logger<T>
     {
-        static readonly ILog iLog = LogManager.GetLogger(typeof(T));
+        static readonly ILog Log = LogManager.GetLogger(typeof(T));
 
         static Logger()
         {
@@ -19,22 +19,22 @@ namespace SysproIntegration.Library.Infrastructure
         public static void LogException(Exception exception)
         {
 
-            iLog.Info("***************************Exception****************************");
-            iLog.Info(System.Environment.NewLine);
-            iLog.Error(Convert.ToString(exception.Message));
-            iLog.Info(Convert.ToString(exception.StackTrace));
-            iLog.Info(System.Environment.NewLine);
-            iLog.Info("****************************************************************");
+            Log.Info("***************************Exception****************************");
+            Log.Info(System.Environment.NewLine);
+            Log.Error(Convert.ToString(exception.Message));
+            Log.Info(Convert.ToString(exception.StackTrace));
+            Log.Info(System.Environment.NewLine);
+            Log.Info("****************************************************************");
         }
         
         public static void LogInfo(string message)
         {
-            iLog.Info(message);
+            Log.Info(message);
         }
        
         public static void LogDateAndTime(DateTime dateTime)
         {
-            iLog.Info(dateTime.ToLongDateString());
+            Log.Info(dateTime.ToLongDateString());
         }
     }
 }

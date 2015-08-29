@@ -1,18 +1,12 @@
-﻿using SysproIntegration.Library.Interfaces.Acumatica;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using SysproIntegration.Library.Models.Acumatica;
 using SysproIntegration.Library.External;
+using SysproIntegration.Library.Interfaces.Repositories;
 
 namespace SysproIntegration.Library.DataAccess.Acumatica
-{
-    
-
-    public class AcumaticaRepository : IAcumaticaStock, IAcumaticaInvoice
+{    
+    public class AcumaticaRepository : IAcumaticaRepository
     {
         private Screen _screen;
         public AcumaticaContext Context { get; private set; }
@@ -47,7 +41,27 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
 
         public string AddInvoice(Invoice invoice)
         {
-            throw new NotImplementedException();
+            //todo:
+            return String.Empty;
+        }
+
+        
+
+        public IList<Invoice> GetInvoices()
+        {
+            //:Todo
+            return new List<Invoice>()
+            {
+                new Invoice(){Column4 = "1",Column5 = "desc1"},
+                new Invoice(){Column4 = "2",Column5 = "desc2"},
+
+            };
+        }
+
+
+        public void AddInvoices(IList<Invoice> invoices)
+        {
+            //todo:
         }
     }
    

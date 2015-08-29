@@ -31,6 +31,7 @@
             this.btnTest = new System.Windows.Forms.Button();
             this.btnTestFileConfig = new System.Windows.Forms.Button();
             this.btnServiceConfig = new System.Windows.Forms.Button();
+            this.btnOpenQBToAcumatica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTest
@@ -63,11 +64,22 @@
             this.btnServiceConfig.UseVisualStyleBackColor = true;
             this.btnServiceConfig.Click += new System.EventHandler(this.btnServiceConfig_Click);
             // 
+            // btnOpenQBToAcumatica
+            // 
+            this.btnOpenQBToAcumatica.Location = new System.Drawing.Point(61, 169);
+            this.btnOpenQBToAcumatica.Name = "btnOpenQBToAcumatica";
+            this.btnOpenQBToAcumatica.Size = new System.Drawing.Size(181, 23);
+            this.btnOpenQBToAcumatica.TabIndex = 3;
+            this.btnOpenQBToAcumatica.Text = "Export Form";
+            this.btnOpenQBToAcumatica.UseVisualStyleBackColor = true;
+            this.btnOpenQBToAcumatica.Click += new System.EventHandler(this.btnOpenQBToAcumatica_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnOpenQBToAcumatica);
             this.Controls.Add(this.btnServiceConfig);
             this.Controls.Add(this.btnTestFileConfig);
             this.Controls.Add(this.btnTest);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnTestFileConfig;
         private System.Windows.Forms.Button btnServiceConfig;
+        private System.Windows.Forms.Button btnOpenQBToAcumatica;
     }
 }
 

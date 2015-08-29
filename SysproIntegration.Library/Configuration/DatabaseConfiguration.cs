@@ -5,19 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using SysproIntegration.Library.Infrastructure;
 
 namespace SysproIntegration.Library.Configuration
 {
     public class DatabaseConfiguration
     {
-        private static readonly FileElementSection FileElementSection = ConfigurationManager.GetSection("fileElementSection") as FileElementSection;
-        private static readonly ServiceElementSection ServiceElementSection = ConfigurationManager.GetSection("serviceElementSection") as ServiceElementSection;
+        private static readonly FileElementSection FileElementSection = 
+                                ConfigurationManager.GetSection("fileElementSection") as FileElementSection;
+        private static readonly ServiceElementSection ServiceElementSection = 
+                                ConfigurationManager.GetSection("serviceElementSection") as ServiceElementSection;
 
-        private readonly static Dictionary<string, FileElement> ElementsFile = new Dictionary<string, FileElement>();
-        private readonly static Dictionary<string, ServiceElement> ElementsService = new Dictionary<string, ServiceElement>();
-        const string FileElement = "//fileElementSection/fileElements/add[@key='{0}']";
-        const string ServiceElement = "//serviceElementSection/serviceElements/add[@key='{0}']";
-
+        private readonly static Dictionary<string, FileElement> ElementsFile = 
+                                                                    new Dictionary<string, FileElement>();
+        private readonly static Dictionary<string, ServiceElement> ElementsService = 
+                                                                    new Dictionary<string, ServiceElement>();
+       
         static DatabaseConfiguration()
         {            
             foreach (FileElement element in FileElementSection.FileElements)
@@ -41,7 +44,7 @@ namespace SysproIntegration.Library.Configuration
 
         public static void SaveDatabaseFileSettings(FileElement fileElement)
         {
-            string keyFormat = string.Format(FileElement, fileElement.Key);
+            string keyFormat = string.Format(Constants.FileElement, fileElement.Key);
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
             if (!string.IsNullOrEmpty(fileElement.Flag))
@@ -67,7 +70,7 @@ namespace SysproIntegration.Library.Configuration
 
         public static void SaveDatabaseServiceSettings(ServiceElement serviceElement)
         {
-            string keyFormat = string.Format(FileElement, serviceElement.Key);
+            string keyFormat = string.Format(Constants.ServiceElement, serviceElement.Key);
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
             if (!string.IsNullOrEmpty(serviceElement.Flag))

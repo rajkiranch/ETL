@@ -18,17 +18,16 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
         {
             this._config = config;
         }
-        public AcumaticaContext()
-            : this(new SysproConfig(Constants.DefaultAcumaticaFileConnectionKey))
+        public AcumaticaContext(): this(new SysproConfig(Constants.DefaultAcumaticaFileConnectionKey))
         {
         }
-        public AcumaticaContext(string key)
-            :this(new SysproConfig(key))
+        public AcumaticaContext(string key):this(new SysproConfig(key))
         {
         }
         public Screen Connect()
         {
-            throw new NotImplementedException();
+            //Todo:
+            return new Screen();
         }
     }
 }

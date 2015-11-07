@@ -18,15 +18,23 @@ namespace SysproIntegration.Library.Presenters
         readonly IInvoiceExportQbToAcumaticaView _invoiceExportQbToAcumaticaView;
         readonly IAcumaticaService _acumaticaService;
         readonly IQuickBooksService _quickBooksService;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="invoiceExportQbToAcumaticaView"></param>
+        /// <param name="acumaticaService"></param>
+        /// <param name="quickBooksService"></param>
         public InvoiceExportQBToAcumaticaPresenter(IInvoiceExportQbToAcumaticaView invoiceExportQbToAcumaticaView,
-            IAcumaticaService acumaticaService, IQuickBooksService quickBooksService)
+                                                   IAcumaticaService acumaticaService, 
+                                                   IQuickBooksService quickBooksService)
         {
             this._invoiceExportQbToAcumaticaView = invoiceExportQbToAcumaticaView;
             this._acumaticaService = acumaticaService;
             this._quickBooksService = quickBooksService;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void LoadInvoices()
         {
             var qbInvoices = from c in _quickBooksService.GetInvoices()
@@ -34,18 +42,18 @@ namespace SysproIntegration.Library.Presenters
                                  {
                                      Column1 = c.Column1,
                                      Column2 = c.Column2
-
                                  };
             _invoiceExportQbToAcumaticaView.QbInvoices = qbInvoices.ToList();
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void ExportToAcumatica()
         {
 
-            var qbInvoicesExportValues = from c in _invoiceExportQbToAcumaticaView.QbInvoices.Where(c=>c.Export==true)              
-                                   select
-                                       new QbInvoice { Column1 = c.Column1, Column2 = c.Column2 };
+            var qbInvoicesExportValues = from c in _invoiceExportQbToAcumaticaView.QbInvoices.Where(c=>c.Export==true)
+                                                    select new QbInvoice { Column1 = c.Column1, Column2 = c.Column2 };
 
             List<QbInvoice> filteredValues = qbInvoicesExportValues.ToList();
 
@@ -70,11 +78,8 @@ namespace SysproIntegration.Library.Presenters
             }
             else
             {
-
                 _invoiceExportQbToAcumaticaView.Message = "Exported Successfully!";
             }
-
-
         }
 
     }

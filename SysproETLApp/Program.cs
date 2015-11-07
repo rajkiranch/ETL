@@ -16,7 +16,6 @@ namespace SysproETLApp
         [STAThread]
         static void Main()
         {
-
             AutoMapperConfiguration.Configure();
             CompositionRoot.Wire(new ApplicationModule());
             Application.EnableVisualStyles();

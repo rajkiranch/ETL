@@ -128,8 +128,11 @@
     <Compile Include="Configuration\SysproConfig.cs" />
     <Compile Include="DataAccess\Acumatica\AcumaticaContext.cs" />
     <Compile Include="DataAccess\Acumatica\AcumaticaRepository.cs" />
+    <Compile Include="DataAccess\CRM\CRMContext.cs" />
+    <Compile Include="DataAccess\CRM\CrmRepository.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksContext.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksRepository.cs" />
+    <Compile Include="External\MSCrmProxy.cs" />
     <Compile Include="External\QBXml.cs" />
     <Compile Include="External\Screen.cs" />
     <Compile Include="Infrastructure\Constants.cs" />
@@ -152,7 +155,9 @@
     <Compile Include="StartUp.cs" />
     <Compile Include="ViewModels\QBToAcumaticaInvoicesExportVM.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />

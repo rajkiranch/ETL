@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace SysproIntegration.Library.External
 {
-    public class QuickBooksXml
+    public class MSCrmProxy
     {
-        //
 
-
-        public List<object> GetInvoices()
-        {
-            return new List<object>();
-        }
     }
 }

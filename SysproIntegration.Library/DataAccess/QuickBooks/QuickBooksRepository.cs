@@ -38,6 +38,8 @@ namespace SysproIntegration.Library.DataAccess.QuickBooks
         {
             
             //:Todo
+
+            var data = _quickBooksXml.GetInvoices();
             return new List<QbInvoice>()
             {
                 new QbInvoice(){Column1 = "1",Column2 = "desc1"},

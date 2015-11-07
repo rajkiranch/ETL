@@ -13,7 +13,7 @@ namespace SysproIntegration.Library.BusinessLogic.Transformations
     {
         protected override void Configure()
         {
-            Mapper.CreateMap<QbInvoice, Invoice>()
+            Mapper.CreateMap<QbInvoice, AcumaticaInvoice>()
                 .ForMember(src => src.Column4, dest => dest.MapFrom(d => d.Column1))
                 .ForMember(src => src.Column5, dest => dest.MapFrom(d => d.Column2));
         }

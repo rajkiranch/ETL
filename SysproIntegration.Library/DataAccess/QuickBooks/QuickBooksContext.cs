@@ -32,8 +32,8 @@ namespace SysproIntegration.Library.DataAccess.QuickBooks
         
         public QuickBooksXml Connect()
         {
-            
-            throw new NotImplementedException();
+
+            return new QuickBooksXml();
         }
     }
 }

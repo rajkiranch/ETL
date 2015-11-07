@@ -8,5 +8,6 @@ namespace SysproIntegration.Library.External
 {
     public class QuickBooksXml
     {
+        //
     }
 }

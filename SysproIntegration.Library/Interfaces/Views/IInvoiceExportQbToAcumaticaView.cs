@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using SysproIntegration.Library.Models.QuickBooks;
+using SysproIntegration.Library.ViewModels;
 
 namespace SysproIntegration.Library.Interfaces.Views
 {
     public interface IInvoiceExportQbToAcumaticaView
     {
-        IList<QbInvoice> QbInvoices { get; set; }
+        IList<QBToAcumaticaInvoicesExportVM> QbInvoices { get; set; }     
 
-        bool ExportInvoicesToAcumatica();
-
-        string Message { get; set; }
+        string Message {  set; }
     }
 }

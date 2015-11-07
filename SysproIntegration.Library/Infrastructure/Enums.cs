@@ -6,5 +6,9 @@ using System.Threading.Tasks;
 
 namespace SysproIntegration.Library.Infrastructure
 {
-   
+    public enum Status
+    {
+        Active=1,
+        Inctive=0
+    }
 }

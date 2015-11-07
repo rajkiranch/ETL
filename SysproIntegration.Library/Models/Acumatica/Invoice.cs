@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysproIntegration.Library.Models.Acumatica
 {
-    public class Invoice
+    public class AcumaticaInvoice
     {
         public string Column4 { get; set; }
 

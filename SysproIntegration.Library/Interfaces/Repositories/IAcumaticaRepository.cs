@@ -7,8 +7,8 @@ namespace SysproIntegration.Library.Interfaces.Repositories
     {
         bool IsStockItemExists(string name);
         string AddStock(Stock stock);
-        string AddInvoice(Invoice invoice);
-        IList<Invoice> GetInvoices();
-        void AddInvoices(IList<Invoice> invoices);
+        string AddInvoice(AcumaticaInvoice invoice);
+        IList<AcumaticaInvoice> GetInvoices();
+        void AddInvoices(IList<AcumaticaInvoice> invoices);
     }
 }

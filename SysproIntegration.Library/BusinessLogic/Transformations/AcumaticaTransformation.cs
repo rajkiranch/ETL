@@ -11,14 +11,14 @@ namespace SysproIntegration.Library.BusinessLogic.Transformations
 {
     public class AcumaticaTransformation
     {
-        public static Invoice TransformQbToAcumaticaInvoice(QbInvoice qbInvoice, Invoice invoice)
+        public static AcumaticaInvoice TransformQbToAcumaticaInvoice(QbInvoice qbInvoice)
         {
-            return Mapper.Map<QbInvoice, Invoice>(qbInvoice);
+            return Mapper.Map<QbInvoice, AcumaticaInvoice>(qbInvoice);
         }
 
-        public static IList<Invoice> TransformQbToAcumaticaInvoiceList(IList<QbInvoice> qbInvoices, IList<Invoice> invoices)
+        public static IList<AcumaticaInvoice> TransformQbToAcumaticaInvoiceList(IList<QbInvoice> qbInvoices)
         {
-            return Mapper.Map<IList<QbInvoice>,IList<Invoice>>(qbInvoices);
+            return Mapper.Map<IList<QbInvoice>,IList<AcumaticaInvoice>>(qbInvoices);
         }
 
     }

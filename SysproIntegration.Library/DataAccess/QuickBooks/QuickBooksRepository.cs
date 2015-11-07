@@ -36,11 +36,12 @@ namespace SysproIntegration.Library.DataAccess.QuickBooks
 
         public IList<QbInvoice> GetInvoices()
         {
+            
             //:Todo
             return new List<QbInvoice>()
             {
                 new QbInvoice(){Column1 = "1",Column2 = "desc1"},
-                new QbInvoice(){Column1 = "2",Column2 = "desc2"},
+                new QbInvoice(){Column1 = "2",Column2 = ""},
 
             };
         }

@@ -147,13 +147,12 @@
     <Compile Include="Models\DataError.cs" />
     <Compile Include="Models\QuickBooks\QBInvoice.cs" />
     <Compile Include="Models\QuickBooks\QBStock.cs" />
+    <Compile Include="Presenters\InvoiceExportQBToAcumaticaPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartUp.cs" />
+    <Compile Include="ViewModels\QBToAcumaticaInvoicesExportVM.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presenters\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />

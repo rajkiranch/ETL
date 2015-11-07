@@ -39,7 +39,7 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
             throw new NotImplementedException();
         }
 
-        public string AddInvoice(Invoice invoice)
+        public string AddInvoice(AcumaticaInvoice invoice)
         {
             //todo:
             return String.Empty;
@@ -47,21 +47,22 @@ namespace SysproIntegration.Library.DataAccess.Acumatica
 
         
 
-        public IList<Invoice> GetInvoices()
+        public IList<AcumaticaInvoice> GetInvoices()
         {
             //:Todo
-            return new List<Invoice>()
+            return new List<AcumaticaInvoice>()
             {
-                new Invoice(){Column4 = "1",Column5 = "desc1"},
-                new Invoice(){Column4 = "2",Column5 = "desc2"},
+                new AcumaticaInvoice(){Column4 = "1",Column5 = "desc1"},
+                new AcumaticaInvoice(){Column4 = "2",Column5 = "desc2"},
 
             };
         }
 
 
-        public void AddInvoices(IList<Invoice> invoices)
+        public void AddInvoices(IList<AcumaticaInvoice> invoices)
         {
             //todo:
+            //this._screen.AddInvoices
         }
     }
    

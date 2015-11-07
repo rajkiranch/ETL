@@ -11,11 +11,11 @@ namespace SysproIntegration.Library.BusinessLogic.Validations
 {
     public partial class InvoiceValidation : IValidation
     {
-        private readonly Invoice _invoice;
+        private readonly AcumaticaInvoice _invoice;
         private bool _isValid = false;
         private IList<string> _errorsList=new List<string>();
 
-        public InvoiceValidation(Invoice invoice)
+        public InvoiceValidation(AcumaticaInvoice invoice)
         {
             this._invoice = invoice;
             CheckValidation();
@@ -46,4 +46,6 @@ namespace SysproIntegration.Library.BusinessLogic.Validations
             get { return _errorsList; }           
         }
     }
+
+    
 }

@@ -62,9 +62,9 @@ namespace SysproETLApp
         }
 
         private void btnOpenQBToAcumatica_Click(object sender, EventArgs e)
-        {
-            var newfrm=new FrmExportInvoice();
-            newfrm.ShowDialog();
+        {            
+            var  newfrm=  CompositionRoot.Resolve<FrmExportInvoice>();
+            newfrm.Show();
         }
     }
 }

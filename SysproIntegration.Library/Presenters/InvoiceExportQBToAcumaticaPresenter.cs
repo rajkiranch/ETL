@@ -9,6 +9,7 @@ using SysproIntegration.Library.Interfaces.Services;
 using SysproIntegration.Library.BusinessLogic;
 using SysproIntegration.Library.ViewModels;
 using SysproIntegration.Library.BusinessLogic.Transformations;
+using SysproIntegration.Library.Infrastructure;
 
 namespace SysproIntegration.Library.Presenters
 {
@@ -65,6 +66,7 @@ namespace SysproIntegration.Library.Presenters
                     }
                 }
                 _invoiceExportQbToAcumaticaView.Message = errorDesc;
+                Logger<InvoiceExportQBToAcumaticaPresenter>.LogInfo(errorDesc);
             }
             else
             {

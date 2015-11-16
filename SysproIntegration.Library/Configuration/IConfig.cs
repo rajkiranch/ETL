@@ -9,7 +9,8 @@ namespace SysproIntegration.Library.Configuration
     public interface IConfig
     {
         string GetAppSettingValue();
-        FileElement GetQuickBookConfiguration();
-        ServiceElement GetAcumaticaConfiguration();
+        FileElement GetFileConfiguration();
+        ServiceElement GetServiceConfiguration();
+        string GerDatabaseConfiguration();
     }
 }

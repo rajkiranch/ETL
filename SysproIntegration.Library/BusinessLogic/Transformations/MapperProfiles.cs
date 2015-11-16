@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using SysproIntegration.Library.Models.Acumatica;
 using SysproIntegration.Library.Models.QuickBooks;
+using SysproIntegration.Library.Models.CRM;
+using SysproIntegration.Library.ViewModels;
 
 namespace SysproIntegration.Library.BusinessLogic.Transformations
 {
@@ -18,4 +20,6 @@ namespace SysproIntegration.Library.BusinessLogic.Transformations
                 .ForMember(src => src.Column5, dest => dest.MapFrom(d => d.Column2));
         }
     }
+
+   
 }

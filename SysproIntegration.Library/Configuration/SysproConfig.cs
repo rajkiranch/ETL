@@ -15,12 +15,12 @@ namespace SysproIntegration.Library.Configuration
         {
             this._key = key;
         }      
-        public FileElement GetQuickBookConfiguration()
+        public FileElement GetFileConfiguration()
         {
             return DatabaseConfiguration.DatabaseFileSettings[_key];
         }
 
-        public ServiceElement GetAcumaticaConfiguration()
+        public ServiceElement GetServiceConfiguration()
         {
             return DatabaseConfiguration.DatabaseServiceSettings[_key];
         }
@@ -28,6 +28,12 @@ namespace SysproIntegration.Library.Configuration
         public string GetAppSettingValue()
         {            
             return ConfigurationManager.AppSettings[_key].ToString();
+        }
+
+
+        public string GerDatabaseConfiguration()
+        {
+            return ConfigurationManager.ConnectionStrings[_key].ConnectionString;
         }
     }
 }

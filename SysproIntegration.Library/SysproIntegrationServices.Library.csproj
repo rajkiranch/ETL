@@ -87,6 +87,18 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="microsoft.crm.sdk.proxy">
+      <HintPath>..\packages\Microsoft.Crm.Sdk.Proxy.2011.5.0.18\lib\net40\microsoft.crm.sdk.proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.client">
+      <HintPath>..\packages\Microsoft.Xrm.Client.2011.5.0.18\lib\net40\microsoft.xrm.client.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk">
+      <HintPath>..\packages\Microsoft.Xrm.Sdk.2011.5.0.18\lib\net40\microsoft.xrm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.xrm.sdk.deployment">
+      <HintPath>..\packages\Microsoft.Xrm.Sdk.Deployment.2011.5.0.18\lib\net40\microsoft.xrm.sdk.deployment.dll</HintPath>
+    </Reference>
     <Reference Include="Netco">
       <HintPath>..\packages\Netco.1.5.1\lib\net45\Netco.dll</HintPath>
     </Reference>
@@ -105,6 +117,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -114,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\AcumaticaService.cs" />
+    <Compile Include="BusinessLogic\ContactService.cs" />
     <Compile Include="BusinessLogic\QuickBooksService.cs" />
     <Compile Include="BusinessLogic\Transformations\AcumaticaTransformation.cs" />
     <Compile Include="BusinessLogic\Transformations\AutoMapperConfiguration.cs" />
@@ -132,7 +147,7 @@
     <Compile Include="DataAccess\CRM\CrmRepository.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksContext.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksRepository.cs" />
-    <Compile Include="External\MSCrmProxy.cs" />
+    <Compile Include="External\MsCrmProxy.cs" />
     <Compile Include="External\QBXml.cs" />
     <Compile Include="External\Screen.cs" />
     <Compile Include="Infrastructure\Constants.cs" />
@@ -140,19 +155,24 @@
     <Compile Include="Infrastructure\Logger.cs" />
     <Compile Include="Interfaces\Repositories\IAcumaticaRepository.cs" />
     <Compile Include="Interfaces\IDataBaseContext.cs" />
+    <Compile Include="Interfaces\Repositories\ICrmRepository.cs" />
     <Compile Include="Interfaces\Repositories\IQbRepository.cs" />
     <Compile Include="Interfaces\Services\IAcumaticaService.cs" />
     <Compile Include="Interfaces\Services\IBaseService.cs" />
+    <Compile Include="Interfaces\Services\ICrmContactService.cs" />
     <Compile Include="Interfaces\Services\IQuickBooksService.cs" />
     <Compile Include="Interfaces\Views\IInvoiceExportQbToAcumaticaView.cs" />
     <Compile Include="Models\Acumatica\Invoice.cs" />
     <Compile Include="Models\Acumatica\Stock.cs" />
+    <Compile Include="Models\CRM\UserInfo.cs" />
     <Compile Include="Models\DataError.cs" />
     <Compile Include="Models\QuickBooks\QBInvoice.cs" />
     <Compile Include="Models\QuickBooks\QBStock.cs" />
+    <Compile Include="Presenters\ContactPresenter.cs" />
     <Compile Include="Presenters\InvoiceExportQBToAcumaticaPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartUp.cs" />
+    <Compile Include="ViewModels\ContactVM.cs" />
     <Compile Include="ViewModels\QBToAcumaticaInvoicesExportVM.cs" />
   </ItemGroup>
   <ItemGroup>

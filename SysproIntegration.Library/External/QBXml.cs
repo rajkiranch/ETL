@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace SysproIntegration.Library.External
 {
     public class QuickBooksXml
     {
-        //
-
-
-        public List<object> GetInvoices()
-        {
-            return new List<object>();
-        }
+        //        
+        public string  InnerXml { get; set; }
     }
 }

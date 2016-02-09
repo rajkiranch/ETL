@@ -11,5 +11,6 @@ namespace SysproIntegration.Library.Interfaces.Services
     public interface IQuickBooksService
     {
         IList<QbInvoice> GetInvoices();
+        
     }
 }

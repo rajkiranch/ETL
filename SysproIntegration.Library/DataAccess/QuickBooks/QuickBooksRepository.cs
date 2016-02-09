@@ -7,45 +7,53 @@ using SysproIntegration.Library.External;
 using SysproIntegration.Library.Interfaces;
 using SysproIntegration.Library.Models.QuickBooks;
 using SysproIntegration.Library.Interfaces.Repositories;
+using SysproIntegration.Library.Configuration;
+using System.Xml;
+using SysproIntegration.Library.Infrastructure;
 
 namespace SysproIntegration.Library.DataAccess.QuickBooks
 {
-    public class QuickBooksRepository:IQbRepository
+    public class QuickBooksInvoiceRepository : QuickBooksBaseRepository,IQbInvoiceRepository
     {
-        public QuickBooksContext Context { get; private set; }
+        public QuickBooksContext QBContext { get; private set; }
         private QuickBooksXml _quickBooksXml;
+        private XmlDocument _xmlDoc;
 
-        public QuickBooksRepository(QuickBooksContext context)
+        public QuickBooksInvoiceRepository()
+            : this(new SysproConfig(Constants.DefaultQbFileConnectionKey).GetFileConfiguration())
         {
-            this.Context = context;
-            this._quickBooksXml = context.Connect();
+           
         }
 
-        public QuickBooksRepository()
-            : this(new QuickBooksContext())
+        public QuickBooksInvoiceRepository(FileElement fileElement )
         {
-
+            base.FileElement = fileElement;
+            this.QBContext = new QuickBooksContext(fileElement);
         }
-
-        public QuickBooksRepository(string key)
-            : this(new QuickBooksContext(key))
-        {
-
-        }
-
 
         public IList<QbInvoice> GetInvoices()
         {
             
             //:Todo
 
-            var data = _quickBooksXml.GetInvoices();
-            return new List<QbInvoice>()
-            {
-                new QbInvoice(){Column1 = "1",Column2 = "desc1"},
-                new QbInvoice(){Column1 = "2",Column2 = ""},
+            List<QbInvoice> qbInvoices=new List<QbInvoice>();
 
-            };
+            XmlDocument xmlInputDoc = new XmlDocument();
+            //write logic here
+            _xmlDoc = xmlInputDoc;
+
+
+            string outputXml;
+
+
+            using (var context = new QuickBooksContext())
+            {
+                outputXml = QBContext.Connect(_xmlDoc).InnerXml;
+            }
+
+            return QuickBooksDBConverter.ConvertXmlToInvoiceData(outputXml);
         }
+
+      
     }
 }

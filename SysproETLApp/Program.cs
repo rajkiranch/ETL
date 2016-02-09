@@ -17,6 +17,7 @@ namespace SysproETLApp
         static void Main()
         {
             AutoMapperConfiguration.Configure();
+
             CompositionRoot.Wire(new ApplicationModule());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

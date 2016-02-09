@@ -45,6 +45,15 @@
     <Reference Include="FluentValidation">
       <HintPath>..\packages\FluentValidation.5.6.2.0\lib\Net45\FluentValidation.dll</HintPath>
     </Reference>
+    <Reference Include="Framework.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\QBDLL\Framework.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.QBXMLRP2Lib, Version=1.0.104.942, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>External\QBDLL\Interop.QBXMLRP2Lib.dll</HintPath>
+    </Reference>
     <Reference Include="Intuit.Ipp.Core">
       <HintPath>..\packages\IppDotNetSdkForQuickBooksApiV3.2.2.0\lib\Intuit.Ipp.Core.dll</HintPath>
     </Reference>
@@ -145,7 +154,9 @@
     <Compile Include="DataAccess\Acumatica\AcumaticaRepository.cs" />
     <Compile Include="DataAccess\CRM\CRMContext.cs" />
     <Compile Include="DataAccess\CRM\CrmRepository.cs" />
+    <Compile Include="DataAccess\QuickBooks\QuickBooksBaseRepository.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksContext.cs" />
+    <Compile Include="DataAccess\QuickBooks\QuickBooksDBConverter.cs" />
     <Compile Include="DataAccess\QuickBooks\QuickBooksRepository.cs" />
     <Compile Include="External\MsCrmProxy.cs" />
     <Compile Include="External\QBXml.cs" />
@@ -166,6 +177,7 @@
     <Compile Include="Models\Acumatica\Stock.cs" />
     <Compile Include="Models\CRM\UserInfo.cs" />
     <Compile Include="Models\DataError.cs" />
+    <Compile Include="Models\QuickBooks\QBCustomer.cs" />
     <Compile Include="Models\QuickBooks\QBInvoice.cs" />
     <Compile Include="Models\QuickBooks\QBStock.cs" />
     <Compile Include="Presenters\ContactPresenter.cs" />
@@ -183,6 +195,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="External\QBDLL\Framework.XmlSerializers.dll" />
+    <Content Include="External\QBDLL\Interop.QBXMLRP2Lib.dll" />
     <Content Include="Services\QBConnectorSync.asmx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

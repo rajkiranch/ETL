@@ -3,7 +3,7 @@ using SysproIntegration.Library.Models.QuickBooks;
 
 namespace SysproIntegration.Library.Interfaces.Repositories
 {
-    public interface IQbRepository
+    public interface IQbInvoiceRepository
     {
         IList<QbInvoice> GetInvoices();  
     }
